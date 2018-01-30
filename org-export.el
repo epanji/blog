@@ -1,6 +1,6 @@
 (require 'ox-twbs)
 
-;; M-x load-file ~/blog/org-export.el
+;; M-x load-file ~/pages/org-export.el
 
 (let ((langs '((emacs-lisp . t)
                (python . t)
@@ -23,8 +23,8 @@
  `(("org-htmls"
     :language "id"
     :base-extension "org"
-    :base-directory "~/blog/orgs/"
-    :publishing-directory "~/blog/docs/"
+    :base-directory "~/pages/"
+    :publishing-directory "~/epanji.github.io/"
     :recursive t
     :publishing-function org-twbs-publish-to-html
     :headline-levels 4
@@ -39,11 +39,11 @@
                      emacs-version org-version)
     :auto-preamble t)
    ("org-assets"
-    :base-directory "~/blog/orgs/"
+    :base-directory "~/pages/"
     :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-    :publishing-directory "~/blog/docs/"
+    :publishing-directory "~/epanji.github.io/"
     :recursive t
     :publishing-function org-publish-attachment)
-   ("epanji-blog" :components ("org-htmls" "org-assets"))))
+   ("epanji-pages" :components ("org-htmls" "org-assets"))))
 
-(org-publish-project "epanji-blog" t)
+(org-publish-project "epanji-pages" t)
